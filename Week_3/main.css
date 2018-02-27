@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+}
+
+html,
+body{
+	margin: 0;
+}
+
+/*best practice:*/
+.clearfix::after{
+	display: block;
+	clear: both;
+	/*to ensure crossbrowser/legacy compat*/
+	height: 0;
+	font-size: 0;
+	content: '';
+
+	/*most safe*/
+	visibility: hidden; 
+}
+
+div,
+header,
+footer,
+main,
+section,
+aside,
+article{
+	min-height: 100px;
+	background-color: rgb(100,100,100, 0.2);
+}
+
+main{
+	width: 900px;
+	margin: 0 auto;
+}
+
+article{
+	width: 600px;
+	float: left;
+}
+
